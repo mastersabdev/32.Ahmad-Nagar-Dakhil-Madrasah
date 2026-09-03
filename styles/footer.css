@@ -1,0 +1,40 @@
+.footer-gradient {
+  background: #122a4e;
+}
+
+.footer-glass {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: none;
+  border-radius: 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: none;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.9);
+  transition: color 0.15s;
+}
+
+.footer-link:hover {
+  color: #f5d76e;
+}
+
+.footer-title {
+  color: #f5d76e;
+  letter-spacing: 0.03em;
+}
+
+.footer-contact {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-logo {
+  box-shadow: none;
+  border: 2px solid #ffffff;
+  background: #ffffff;
+}
+
+.footer-copyright {
+  background: #0e2240;
+  color: rgba(255, 255, 255, 0.85);
+}

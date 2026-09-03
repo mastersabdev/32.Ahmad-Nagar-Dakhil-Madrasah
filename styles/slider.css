@@ -1,0 +1,64 @@
+.navigation-wrapper {
+  position: relative;
+}
+
+.dots {
+  display: flex;
+  padding: 8px 0;
+  justify-content: center;
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 4px;
+}
+
+.dot {
+  border: none;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+}
+
+.dot:focus {
+  outline: none;
+}
+
+.dot.active {
+  background: #cf2e2e;
+}
+
+.arrow {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: #fff;
+  cursor: pointer;
+  background: rgba(18, 42, 78, 0.85);
+  border-radius: 2px;
+  padding: 6px;
+}
+
+.arrow:hover {
+  background: #1a3a6b;
+}
+
+.arrow--left {
+  left: 8px;
+}
+
+.arrow--right {
+  left: auto;
+  right: 8px;
+}
+
+.arrow--disabled {
+  fill: rgba(255, 255, 255, 0.5);
+  opacity: 0.5;
+  pointer-events: none;
+}

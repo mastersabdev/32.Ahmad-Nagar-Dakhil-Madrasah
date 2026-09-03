@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@theme {
+  /* Classic school navy + gold palette */
+  --color-primary: #1a3a6b;
+  --color-primary-50: #f1f5fb;
+  --color-primary-100: #dce6f5;
+  --color-primary-200: #b8cceb;
+  --color-primary-300: #87a8d9;
+  --color-primary-400: #557fc1;
+  --color-primary-500: #1a3a6b;
+  --color-primary-600: #16325c;
+  --color-primary-700: #122a4e;
+  --color-primary-800: #0e2240;
+  --color-primary-900: #0a1830;
+
+  --color-accent: #cf2e2e;
+  --color-accent-light: #fee2e2;
+  --color-accent-dark: #b91c1c;
+
+  --color-secondary: #f5d76e;
+  --color-secondary-dark: #d4a017;
+
+  --color-background: #e8ebf0;
+  --color-background-secondary: #f3f4f6;
+  --color-surface: #ffffff;
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-2xl: 1320px;
+
+  --animate-marquee: marquee 25s linear infinite;
+  --animate-shimmer: shimmer 2s infinite;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%) skewX(-12deg);
+    }
+    100% {
+      transform: translateX(200%) skewX(-12deg);
+    }
+  }
+}
+
+body {
+  font-family: var(--font-anek-bangla), var(--font-roboto), system-ui, sans-serif;
+  color: #1a1a1a;
+}
+
+button {
+  cursor: pointer;
+}
+
+@utility section-title {
+  @apply text-lg md:text-xl font-bold text-primary-800;
+}
+
+@utility section-subtitle {
+  @apply text-slate-600 mt-1 text-sm;
+}
+
+@utility container {
+  @apply mx-auto max-w-[1280px] px-2 sm:px-2.5 lg:px-3 w-full;
+}
+
+@utility card {
+  @apply rounded-none border border-slate-300 bg-white shadow-none;
+}
+
+@utility card-body {
+  @apply p-3 sm:p-4;
+}
+
+@utility page-header {
+  @apply mb-4 md:mb-5;
+}
+
+@utility input-field {
+  @apply w-full px-3 py-2 border border-slate-300 rounded-sm bg-white focus:outline-none focus:ring-1 focus:ring-primary-500 focus:border-primary-500 duration-150 transition placeholder:text-slate-400;
+}
+
+@utility btn-primary {
+  @apply px-4 py-2 rounded-sm bg-primary text-white font-medium hover:bg-primary-700 transition-colors duration-150;
+}
+
+@utility btn-accent {
+  @apply px-4 py-2 rounded-sm bg-secondary text-slate-900 font-semibold hover:bg-secondary-dark transition-colors duration-150;
+}
+
+@utility gov-panel {
+  @apply border border-slate-300 bg-white;
+}
+
+@utility gov-panel-header {
+  @apply bg-primary text-white px-3 py-2 font-bold text-base;
+}
+
+@utility gov-panel-header-muted {
+  @apply bg-slate-200 text-slate-900 px-3 py-2 font-bold text-base border-b border-slate-300;
+}
+
+@utility debug {
+  @apply border border-red-500;
+}
+
+@utility btn {
+  @apply px-2 hover:opacity-90 duration-200 transition;
+}

@@ -1,0 +1,63 @@
+.header-gradient {
+  background: #1a3a6b;
+}
+
+.header-nav {
+  background: #122a4e;
+}
+
+.header-glass {
+  background: transparent;
+  backdrop-filter: none;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.header-link {
+  color: #ffffff;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.header-link:hover {
+  color: #f5d76e;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.header-title {
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  text-shadow: none;
+}
+
+.header-contact {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.header-logo {
+  box-shadow: none;
+  border: 2px solid #ffffff;
+  background: #ffffff;
+}
+
+.header-logo:hover {
+  transform: none;
+}
+
+.header-news {
+  background: #1a3a6b;
+  color: #ffffff;
+  border-radius: 0;
+  border: none;
+}
+
+.news-label {
+  background: #cf2e2e;
+  color: #ffffff;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.text-shadow {
+  text-shadow: none;
+}
