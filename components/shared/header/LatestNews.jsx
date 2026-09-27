@@ -1,4 +1,8 @@
+"use client";
+
 const LatestNews = ({ data }) => {
+  const newsText = data?.latest_news || "Welcome to our website!";
+
   return (
     <div className="bg-primary border-y border-primary-800">
       <div className="container flex items-stretch min-h-[36px]">
@@ -7,14 +11,21 @@ const LatestNews = ({ data }) => {
         </div>
 
         <div className="relative w-full overflow-hidden whitespace-nowrap group header-news flex items-center">
-          <div className="inline-flex animate-marquee group-hover:[animation-play-state:paused] cursor-default">
-            <span className="mx-4 text-white shrink-0 max-md:text-sm font-medium">
-              {data?.latest_news || ""}
-            </span>
-            <span className="mx-4 text-white shrink-0 max-md:text-sm font-medium">
-              {data?.latest_news || ""}
-            </span>
-          </div>
+          <marquee
+            className="w-full text-white max-md:text-sm font-medium cursor-default"
+            behavior="scroll"
+            direction="left"
+            scrollamount="7"
+            scrolldelay="0"
+            loop={Infinity}
+            style={{ whiteSpace: "nowrap" }}
+            onMouseEnter={(event) => event.currentTarget.stop()}
+            onMouseLeave={(event) => event.currentTarget.start()}
+          >
+            <span className="inline-block mr-8">{newsText}</span>
+            <span className="inline-block mr-8">{newsText}</span>
+            <span className="inline-block mr-8">{newsText}</span>
+          </marquee>
         </div>
       </div>
     </div>
