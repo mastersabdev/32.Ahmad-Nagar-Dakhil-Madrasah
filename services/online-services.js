@@ -5,7 +5,8 @@ const school_id = process.env.SCHOOL_ID;
 
 export const getOnlineServices = async (page = 1, limit = 8) => {
   const res = await fetch(
-    `${base_url}/online-services/public/school/${school_id}`
+    `${base_url}/online-services/public/school/${school_id}`,
+    { next: { revalidate: 10 } }
   );
   const data = await res.json();
   return data?.item;

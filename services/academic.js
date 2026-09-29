@@ -5,7 +5,8 @@ const school_id = process.env.SCHOOL_ID;
 
 export const getManagingCommittees = async () => {
   const res = await fetch(
-    `${base_url}/managing-committees/public/school/${school_id}`
+    `${base_url}/managing-committees/public/school/${school_id}`,
+    { next: { revalidate: 10 } }
   );
   if (!res.ok) {
     throw new Error("Failed to fetch committees");
@@ -16,7 +17,8 @@ export const getManagingCommittees = async () => {
 
 export const classRoutines = async () => {
   const res = await fetch(
-    `${base_url}/class-routines/public/school/${school_id}`
+    `${base_url}/class-routines/public/school/${school_id}`,
+    { next: { revalidate: 10 } }
   );
   if (!res.ok) {
     throw new Error("Failed to fetch class routines");
@@ -27,7 +29,8 @@ export const classRoutines = async () => {
 
 export const getStudentSummary = async (page = 1, limit = 8) => {
   const res = await fetch(
-    `${base_url}/student-summary/public/school/${school_id}?page=${page}&limit=${limit}`
+    `${base_url}/student-summary/public/school/${school_id}?page=${page}&limit=${limit}`,
+    { next: { revalidate: 10 } }
   );
   const data = await res.json();
   return data;

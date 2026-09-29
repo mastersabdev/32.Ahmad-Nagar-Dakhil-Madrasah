@@ -5,7 +5,8 @@ const school_id = process.env.SCHOOL_ID;
 
 export const getGalleries = async (page = 1, limit = 8) => {
   const res = await fetch(
-    `${base_url}/galleries/public/school/${school_id}?page=${page}&limit=${limit}`
+    `${base_url}/galleries/public/school/${school_id}?page=${page}&limit=${limit}`,
+    { next: { revalidate: 10 } }
   );
   const data = await res.json();
   return data;
