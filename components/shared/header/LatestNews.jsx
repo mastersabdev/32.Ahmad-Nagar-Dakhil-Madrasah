@@ -23,8 +23,8 @@ const LatestNews = ({ data }) => {
             onMouseLeave={(event) => event.currentTarget.start()}
           >
             <span className="inline-block mr-8">{newsText}</span>
-            <span className="inline-block mr-8">{newsText}</span>
-            <span className="inline-block mr-8">{newsText}</span>
+            {/* <span className="inline-block mr-8">{newsText}</span>
+            <span className="inline-block mr-8">{newsText}</span> */}
           </marquee>
         </div>
       </div>
