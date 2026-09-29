@@ -18,6 +18,24 @@ const ManagingCommitteeCard = ({ committee }) => {
       <p className="text-xs text-primary-700 font-semibold mt-1">
         {committee?.designation}
       </p>
+
+      {committee?.email && (
+        <a
+          className="block text-xs text-slate-600 hover:text-primary-700 mt-2 break-words"
+          href={`mailto:${committee.email}`}
+        >
+          {committee.email}
+        </a>
+      )}
+
+      {committee?.mobile_no && (
+        <a
+          className="block text-xs text-slate-600 hover:text-primary-700 mt-1"
+          href={`tel:${committee.mobile_no}`}
+        >
+          {committee.mobile_no}
+        </a>
+      )}
     </div>
   );
 };
